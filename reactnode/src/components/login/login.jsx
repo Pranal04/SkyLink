@@ -20,8 +20,18 @@ const Login = ({ setUser }) => {
             setUser(userCredential.user); // Store user in state
             navigate("/"); // Redirect to homepage
         } catch (error) {
-            setError("Invalid email or password. Try again.");
-        } finally {
+            console.error("Firebase Login Error:", error.code, error.message); // Debugging
+            if (error.code === "auth/user-not-found") {
+                setError("No account found with this email. Sign up first.");
+            } else if (error.code === "auth/wrong-password") {
+                setError("Incorrect password. Try again.");
+            } else if (error.code === "auth/too-many-requests") {
+                setError("Too many failed attempts. Try again later.");
+            } else {
+                setError("Login failed. Please check your details.");
+            }
+        }
+         finally {
             setLoading(false);
         }
     };
