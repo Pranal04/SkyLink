@@ -8,6 +8,7 @@ import Book from './components/book/book.jsx'
 import Login from './components/login/login.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Signup from './components/signup/signup.jsx'
+import ShowFlights from './components/ShowFlights/ShowFlights.jsx'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <Signup />
+      },
+      {
+        path: "/showFlights",
+        element: <ShowFlights />
       },
       
     ]

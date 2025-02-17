@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <section className="fixed w-full bg-white shadow-md z-50">
+    <section className="fixed top-0 w-full bg-white shadow-md z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">
