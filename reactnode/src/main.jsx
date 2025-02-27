@@ -9,6 +9,7 @@ import Login from './components/login/login.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Signup from './components/signup/signup.jsx'
 import ShowFlights from './components/ShowFlights/ShowFlights.jsx'
+import ShowFlightsReturn from './components/ShowFlightsReturn/ShowFlightsReturn.jsx'
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/showFlights",
         element: <ShowFlights />
+      },
+      {
+        path: "/showFlightsReturn",
+        element: <ShowFlightsReturn />
       },
     ]
   }
