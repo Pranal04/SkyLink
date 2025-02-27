@@ -40,7 +40,6 @@ const router = createBrowserRouter([
         path: "/showFlights",
         element: <ShowFlights />
       },
-      
     ]
   }
 ])
