@@ -38,9 +38,6 @@ const ShowFlightsReturn = () => {
 
         fetchFlights();
     }, [from, to, travelClass]);
-    const handleSearch = () => {
-        navigate(`/showFlightsReturn?from=${departure}&to=${arrival}&date=${departureDate}&class=${selectedClass}`);
-      };
 
     return (
         <div>
@@ -70,7 +67,7 @@ const ShowFlightsReturn = () => {
                                     <p className="text-gray-500 text-sm">{flight.to}</p>
                                 </div>
                                 <div className="items-right">
-                                    <button onClick={handleSearch} className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition">
+                                    <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition">
                                         Rs. {flight.price}
                                     </button>
                                 </div>

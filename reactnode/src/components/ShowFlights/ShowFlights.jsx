@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Plane } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { db } from "/firebaseConfig.js"; // Import Firestore instance
 import { collection, getDocs, query, where } from "firebase/firestore";
+import Book from "../book/book";
 
 const ShowFlights = () => {
     const [flights, setFlights] = useState([]);
     const location = useLocation();
+    const navigate = useNavigate();
     
     // Parse query params
     const searchParams = new URLSearchParams(location.search);
@@ -39,6 +41,10 @@ const ShowFlights = () => {
         fetchFlights();
     }, [from, to, travelClass]);
 
+    const handleSearch = () => {
+        navigate(`/showFlightsReturn?from=${departure}&to=${arrival}&date=${departureDate}&class=${selectedClass}`);
+      };
+
     return (
         <div>
             <h1 className="p-4 text-4xl mt-24 text-left text-blue-600 font-bold">Available Flights</h1>
@@ -67,7 +73,7 @@ const ShowFlights = () => {
                                     <p className="text-gray-500 text-sm">{flight.to}</p>
                                 </div>
                                 <div className="items-right">
-                                    <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition">
+                                    <button onClick={handleSearch} className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition">
                                         Rs. {flight.price}
                                     </button>
                                 </div>

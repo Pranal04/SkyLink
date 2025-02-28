@@ -10,6 +10,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Signup from './components/signup/signup.jsx'
 import ShowFlights from './components/ShowFlights/ShowFlights.jsx'
 import ShowFlightsReturn from './components/ShowFlightsReturn/ShowFlightsReturn.jsx'
+import AdminDash from './components/AdminDash/AdminDash.jsx'
+import AdminSched from './components/AdminSched/AdminSched.jsx'
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,15 @@ const router = createBrowserRouter([
         path: "/showFlightsReturn",
         element: <ShowFlightsReturn />
       },
+      {
+        path: "/admindash",
+        element: <AdminDash />
+      },
+      {
+        path: "/schedule",
+        element: <AdminSched />
+      },
+      
     ]
   }
 ])
