@@ -12,6 +12,7 @@ import ShowFlights from './components/ShowFlights/ShowFlights.jsx'
 import ShowFlightsReturn from './components/ShowFlightsReturn/ShowFlightsReturn.jsx'
 import AdminDash from './components/AdminDash/AdminDash.jsx'
 import AdminSched from './components/AdminSched/AdminSched.jsx'
+import AddFlights from './components/AddFlights/AddFlights.jsx'
 
 const router = createBrowserRouter([
   {
@@ -55,7 +56,10 @@ const router = createBrowserRouter([
         path: "/schedule",
         element: <AdminSched />
       },
-      
+      {
+        path: "/addflight",
+        element: <AddFlights />
+      },
     ]
   }
 ])

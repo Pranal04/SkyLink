@@ -10,18 +10,6 @@ const AdminDash = () => {
   const [flights, setFlights] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const bookingsSnap = await getDocs(collection(db, 'bookings'));
-  //     const flightsSnap = await getDocs(collection(db, 'flights'));
-  //     setBookings(bookingsSnap.docs.map(doc => doc.data()));
-  //     setFlights(flightsSnap.docs.map(doc => doc.data()));
-  //     setLoading(false);
-  //   };
-
-  //   fetchData();
-  // }, []);
-
   // Calculate statistics from real data
   const stats = {
     totalBookings: bookings.length,

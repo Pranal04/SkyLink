@@ -19,19 +19,6 @@ const AdminSched = () => {
   fetchFlights();
 }, []);
 
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const bookingsSnap = await getDocs(collection(db, 'bookings'));
-  //     const flightsSnap = await getDocs(collection(db, 'flights'));
-  //     setBookings(bookingsSnap.docs.map(doc => doc.data()));
-  //     setFlights(flightsSnap.docs.map(doc => doc.data()));
-  //     setLoading(false);
-  //   };
-
-  //   fetchData();
-  // }, []);
-
   // Calculate statistics from real data
   
   const SidebarItem = ({ icon: Icon, text, isActive, onClick }) => (
