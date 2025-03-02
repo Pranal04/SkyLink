@@ -13,6 +13,7 @@ import ShowFlightsReturn from './components/ShowFlightsReturn/ShowFlightsReturn.
 import AdminDash from './components/AdminDash/AdminDash.jsx'
 import AdminSched from './components/AdminSched/AdminSched.jsx'
 import AddFlights from './components/AddFlights/AddFlights.jsx'
+import PassDetails from './components/PassDetails/PassDetails.jsx'
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
         path: "/addflight",
         element: <AddFlights />
       },
+      {
+        path: "/passengerEdit",
+        element: <PassDetails />
+      }
     ]
   }
 ])
